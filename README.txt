@@ -5,6 +5,8 @@
 「ToolContainer\PluginInterface\bin\Release\PluginInterface.dll」
 
 作成したプラグインのDLLを、ToolContainerのリリースフォルダに以下の構成で格納する。
+ビルド後イベントに以下を追加する。
+「xcopy /I /Y $(ProjectDir)bin\Release $(SolutionDir)..\Release\plugins\$(ProjectName)」
 
 Release\
 　├ ToolContainer.exe
