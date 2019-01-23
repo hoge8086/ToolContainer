@@ -61,6 +61,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /I /Y $(ProjectDir)bin\Release $(SolutionDir)..\Release\plugins\$(ProjectName)</PostBuildEvent>
+    <PostBuildEvent>xcopy /I /Y $(ProjectDir)bin\$(ConfigurationName) $(SolutionDir)..\$(ConfigurationName)\plugins\$(ProjectName)</PostBuildEvent>
   </PropertyGroup>
 </Project>
